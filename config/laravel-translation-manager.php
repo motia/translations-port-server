@@ -1,5 +1,7 @@
 <?php
 
+$locales = array_filter(explode(',', env('TRANSLATION_LOCALES', 'en')));
+
 return array(
 
     /**
@@ -11,7 +13,7 @@ return array(
      *
      * @type string
      */
-    'primary_locale' => 'en',
+    'primary_locale' => $locales[0] ?? 'en',
     /**
      * Specify the maximum translation key length to generate for JSON translation keys
      * it will be the smaller of 120 and this value. These are keys in the database, not JSON translation files
@@ -25,11 +27,7 @@ return array(
      *
      * @type array of strings
      */
-    'locales' => [
-        'en',
-        'es',
-        'fr',
-    ],
+    'locales' => $locales,
     /**
      * Disable React-UI link in WebUI and route to UI
      *
@@ -61,8 +59,7 @@ return array(
      *
      * @type array of strings
      */
-    'show_locales' => [
-    ],
+    'show_locales' => $locales,
     /**
      * Specify the prefix used for all cookies, session data and cache persistence.
      *

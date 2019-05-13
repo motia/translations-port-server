@@ -13,13 +13,14 @@ use Motia\TranslationsPort\Controllers\MessagesController;
 |
 */
 
-MessagesController::routes([
-  'prefix' => 'messages',
-]);
-
-
-if (env('SAVE_MISSING_TRANSLATIONS')) {
+if (config('translations-port.missing_messages_prefix')) {
   \Motia\TranslationsPort\Controllers\MissingMessagesController::routes([
-    'prefix' => 'trans-export',
+    'prefix' => config('translations-port.missing_messages_prefix'),
   ]);
+}
+
+if (config('translations-port.messages_prefix')) {
+    MessagesController::routes([
+      'prefix' => config('translations-port.messages_prefix'),
+    ]);
 }

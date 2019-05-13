@@ -9,9 +9,9 @@
  */
 return [
     'loader' => \Motia\TranslationsPort\Loaders\VschTranslationsLoader::class,
-    'groups' => ['client_app'],
+    'groups' => array_filter(explode(',', env('TRANSLATION_GROUPS', ''))),
     'rest_url' => null,
-    'locales' => ['en', 'fr', 'es'],
+    'locales' => explode(',', env('TRANSLATION_LOCALES', 'en')),
     'import' => [
         'dir' => null,
     ],
@@ -19,4 +19,8 @@ return [
         'dir' => null,
         'format' => 'json'
     ],
+
+    // whether to register routes to store missing
+    'missing_messages_prefix' => env('TRANSLATION_MISSING_PREFIX'),
+    'messages_prefix' => env('TRANSLATION_MESSAGES_PREFIX'),
 ];
