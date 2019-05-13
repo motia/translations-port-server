@@ -12,7 +12,6 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "motia/laravel-translation-exporter": "dev-master",
         "motia/laravel-translations-port": "^0.1.2",
         "vsch/laravel-translation-manager": "^2.6"
     },

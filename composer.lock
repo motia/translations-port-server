@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e63a6b56d37f73f99a652d3c01a2356",
+    "content-hash": "d97063b216b33079855653d00e69ab49",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1483,52 +1483,6 @@
                 "psr-3"
             ],
             "time": "2018-11-05T09:00:11+00:00"
-        },
-        {
-            "name": "motia/laravel-translation-exporter",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/motia/laravel-transaltions-exporter.git",
-                "reference": "9b67db5d6a8ce0345829d745a3a71958b1a00451"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/motia/laravel-transaltions-exporter/zipball/9b67db5d6a8ce0345829d745a3a71958b1a00451",
-                "reference": "9b67db5d6a8ce0345829d745a3a71958b1a00451",
-                "shasum": ""
-            },
-            "require": {
-                "vsch/laravel-translation-manager": "^2.6"
-            },
-            "require-dev": {
-                "symfony/yaml": "^4.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Motia\\TransExport\\TransExportProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Motia\\TransExport\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Utility package to use your translations in your laravel backend and client app at the same time.",
-            "keywords": [
-                "SPA",
-                "i18n",
-                "translations"
-            ],
-            "abandoned": "motia/laravel-translations-port",
-            "time": "2018-12-31T23:58:11+00:00"
         },
         {
             "name": "motia/laravel-translations-port",
@@ -5530,9 +5484,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "motia/laravel-translation-exporter": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

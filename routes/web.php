@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +15,8 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::group(['prefix' => 't', 'middleware' => 'auth'], function () {
+  \Vsch\TranslationManager\Controller::routes([]);
 });

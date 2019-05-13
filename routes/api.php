@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Motia\TranslationsPort\Controllers\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+MessagesController::routes([
+  'prefix' => 'localization/messages',
+]);
+
+
+if (env('SAVE_MISSING_TRANSLATIONS')) {
+  \Motia\TranslationsPort\Controllers\MissingMessagesController::routes([
+    'prefix' => 'trans-export',
+  ]);
+}
