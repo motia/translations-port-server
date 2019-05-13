@@ -12,10 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, [
-            'name' => 'admin',
-            'email' => env('APP_ENV')'admin@admin.com',
-            'password' => bcrypt()
-        ])->create();
+        //
     }
 }

@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::group(['prefix' => 't', 'middleware' => 'auth'], function () {
   \Vsch\TranslationManager\Controller::routes([]);
 });
+
+Route::group(['namespace' => 'App\\Http\\Controllers'], function () {
+    Auth::routes();
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
