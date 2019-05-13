@@ -14,8 +14,20 @@
                         </div>
                     @endif
 
-                    <a href="/t" class="btn btn-primary">Translations</a>
-                    <a href="/logs" class="btn btn-primary">Logs</a>
+
+                    <div class="d-flex justify-content-around">
+                        <a class="btn btn-primary"  style="width: 120px;"
+                            href="/t/view/{{ config('translations-port.groups')[0] ?? '' }}"
+                        >
+                            Translations
+                        </a>
+
+                        <a class="btn btn-secondary" style="width: 120px;"
+                            href="/logs"
+                        >
+                            Logs
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
