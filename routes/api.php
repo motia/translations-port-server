@@ -14,7 +14,7 @@ use Motia\TranslationsPort\Controllers\MessagesController;
 */
 
 MessagesController::routes([
-  'prefix' => 'localization/messages',
+  'prefix' => 'messages',
 ]);
 
 

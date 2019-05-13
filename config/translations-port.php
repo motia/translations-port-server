@@ -9,6 +9,7 @@
  */
 return [
     'loader' => \Motia\TranslationsPort\Loaders\VschTranslationsLoader::class,
+    'groups' => ['client_app'],
     'rest_url' => null,
     'locales' => ['en', 'fr', 'es'],
     'import' => [

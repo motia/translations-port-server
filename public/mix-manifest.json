@@ -1,0 +1,6 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/vendor/laravel-translation-manager/js/index.js": "/vendor/laravel-translation-manager/js/index.js",
+    "/vendor/laravel-translation-manager/css/index.css": "/vendor/laravel-translation-manager/css/index.css"
+}
