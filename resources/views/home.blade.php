@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="/t" class="btn btn-primary">Translations</a>
+                    <a href="/logs" class="btn btn-primary">Logs</a>
                 </div>
             </div>
         </div>

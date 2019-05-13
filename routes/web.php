@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['namespace' => 'App\\Http\\Controllers'], function () {
     Auth::routes();
+    Route::get('/', 'Auth\LoginController@showLoginForm');
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 });
 
 Route::group(['prefix' => 't', 'middleware' => 'auth'], function () {
