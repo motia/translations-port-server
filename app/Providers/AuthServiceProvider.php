@@ -25,6 +25,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define(\Vsch\TranslationManager\Manager::ABILITY_ADMIN_TRANSLATIONS, function ($user) {
+             /* @var $user \App\User */
+             return $user && $user->is_admin;
+         });
     }
 }

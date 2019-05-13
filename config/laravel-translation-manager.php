@@ -97,7 +97,7 @@ return array(
      *
      * @type boolean
      */
-    'user_locales_enabled' => false,
+    'user_locales_enabled' => true,
     /**
      * Enable markdown translation to html on the fly
      *
@@ -156,7 +156,7 @@ return array(
      *
      * @type boolean
      */
-    'mismatch_enabled' => false,
+    'mismatch_enabled' => true,
     /**
      * Exclude specific groups from Laravel Translation Manager.
      * This is useful if, for example, you want to avoid editing the official Laravel language files.
@@ -273,7 +273,7 @@ return array(
      *
      */
 
-    'yandex_translator_key' => '',
+    'yandex_translator_key' => env('YANDEX_TRANSLATOR_KEY', ''),
     /**
      * used to provide configuration on where the translation files are stored and where to write them out.
      *
